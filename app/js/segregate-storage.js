@@ -1,6 +1,7 @@
-class Storage {
-    constructor(name) {
+class SStorage {
+    constructor(name, default_val = {}) {
         this.name = name;
+        this.default_val = default_val;
 
 
         this.init();
@@ -42,8 +43,7 @@ class Storage {
     // Метод подготовки
     prepareStorage() {
         if (localStorage.getItem(this.name) == null) {
-            let start_obj = {};
-            localStorage.setItem(this.name, JSON.stringify(start_obj));
+            localStorage.setItem(this.name, JSON.stringify(this.default_val));
 
             return true;
         }
@@ -59,4 +59,4 @@ class Storage {
     }
 }
 
-window.Storage = Storage;
+// window.Storage = Storage;

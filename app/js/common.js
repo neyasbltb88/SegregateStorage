@@ -1,2 +1,2 @@
-const storage = new Storage('test_name');
-const storage2 = new Storage('newStorage');
+const storage = new SStorage('test_name');
+const storage2 = new SStorage('newStorage');
